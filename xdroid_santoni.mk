@@ -22,17 +22,21 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 # Inherit from santoni device
 $(call inherit-product, device/xiaomi/santoni/device.mk)
 
-# Inherit some common Ancient stuff.
-$(call inherit-product, vendor/ancient/config/common_full_phone.mk)
+# Prebuilt Apps
+$(call inherit-product-if-exists, vendor/prebuilt-apps/config.mk)
 
-# Prebuilt apps
-$(call inherit-product-if-exists, vendor/prebuilt-apps/config.mk)
-$(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
+# Inherit some common custom stuff.
+$(call inherit-product, vendor/xdroid/config/common.mk)
+
+# Xdroid Stuff
+XDROID_BOOT_DARK := true
+XDROID_BOOT := 720
+XDROID_MAINTAINER := Rafaaa (@Krxyzn)
 
 PRODUCT_DEVICE := santoni
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 4X
-PRODUCT_NAME := ancient_santoni
+PRODUCT_NAME := xdroid_santoni
 BOARD_VENDOR := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 
@@ -46,7 +50,7 @@ TARGET_BOOT_ANIMATION_RES := 720
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="santoni-user 7.1.2 N2G47H V9.5.10.0.NAMMIFD release-keys"
+    PRIVATE_BUILD_DESC="raven-user 12 SQ1D.220205.003 8069835 release-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := "Xiaomi/santoni/santoni:7.1.2/N2G47H/V9.5.10.0.NAMMIFD:user/release-keys"
+BUILD_FINGERPRINT := "google/raven/raven:12/SQ1D.220205.003/8069835:user/release-keys"

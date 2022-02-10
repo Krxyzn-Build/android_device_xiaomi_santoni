@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-   $(LOCAL_DIR)/ancient_santoni.mk
+   $(LOCAL_DIR)/xdroid_santoni.mk
 
 COMMON_LUNCH_CHOICES := \
-    ancient_santoni-user \
-    ancient_santoni-userdebug \
-    ancient_santoni-eng
+    xdroid_santoni-user \
+    xdroid_santoni-userdebug \
+    xdroid_santoni-eng
