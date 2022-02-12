@@ -23,21 +23,20 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 $(call inherit-product, device/xiaomi/santoni/device.mk)
 
 # Inherit some common Raven stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/komodo/config/common_full_phone.mk)
 
-# Raven Stuff
-RAVEN_BUILD_TYPE := OFFICIAL
-RAVEN_MAINTAINER := Rafa Ibrahim 
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-       org.raven.device=santoni
-TARGET_SUPPORTS_QUICK_TAP := false
+# Komodo stuff
+KOMODO_OFFICIAL := true
+KOMODO_GAPPS_TYPE := nongapps
+KOMODO_VARIANT := RELEASE
+
 # Prebuilt apps
 $(call inherit-product-if-exists, vendor/prebuilt-apps/config.mk)
 
 PRODUCT_DEVICE := santoni
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 4X
-PRODUCT_NAME := aosp_santoni
+PRODUCT_NAME := komodo_santoni
 BOARD_VENDOR := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 

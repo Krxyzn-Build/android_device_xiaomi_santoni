@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-   $(LOCAL_DIR)/aosp_santoni.mk
+   $(LOCAL_DIR)/komodo_santoni.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_santoni-user \
-    aosp_santoni-userdebug \
-    aosp_santoni-eng
+    komodo_santoni-user \
+    komodo_santoni-userdebug \
+    komodo_santoni-eng
