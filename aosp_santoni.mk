@@ -22,12 +22,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 # Inherit from santoni device
 $(call inherit-product, device/xiaomi/santoni/device.mk)
 
-# Inherit some common AEX stuff.
-$(call inherit-product, vendor/aosp/common.mk)
+# Inherit some common Raven stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
+# Raven Stuff
+RAVEN_BUILD_TYPE := OFFICIAL
+RAVEN_MAINTAINER := Rafa Ibrahim 
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+       org.raven.device=santoni
 
 # Prebuilt apps
 $(call inherit-product-if-exists, vendor/prebuilt-apps/config.mk)
-$(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
 
 PRODUCT_DEVICE := santoni
 PRODUCT_BRAND := Xiaomi
