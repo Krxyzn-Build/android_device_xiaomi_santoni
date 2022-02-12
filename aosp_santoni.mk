@@ -30,7 +30,7 @@ RAVEN_BUILD_TYPE := OFFICIAL
 RAVEN_MAINTAINER := Rafa Ibrahim 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
        org.raven.device=santoni
-
+TARGET_SUPPORTS_QUICK_TAP := false
 # Prebuilt apps
 $(call inherit-product-if-exists, vendor/prebuilt-apps/config.mk)
 
